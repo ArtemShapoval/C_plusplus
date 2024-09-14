@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath> // для математичних функцій
+#include <cmath> 
 
 using namespace std;
 
