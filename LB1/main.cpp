@@ -17,3 +17,4 @@ int main() {
 
     return 0;
 }
+//double y = (1.3 * sin(a) + cos(b)) / (0.81 * sin(b) + 1.1 * cos(a)) * exp(log(b / a));
