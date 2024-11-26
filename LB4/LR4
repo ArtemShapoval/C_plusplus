@@ -1,0 +1,87 @@
+//task 6 
+#include <iostream>
+using namespace std;
+int main(void) {
+    bool answer;
+    int value;
+    cout << "Enter a value: ";
+    cin >> value;
+    answer = (value >= 0 && value < 10) ||
+             (value * 2 < 20 && value - 2 > -2) ||
+             (value - 1 > 1 && value / 2 < 10) ||
+             (value == 111);
+    cout << (answer ? "THAT'S TRUE :)" : "THAT'S NOT TRUE :(") << endl;
+    return 0;
+}
+//task 7 
+#include <iostream>
+#include <iomanip> 
+using namespace std;
+
+int main(void) {
+   
+    double var1, var2, var3, var4;
+    int var5;
+
+    
+    cout << "Enter five values:" << endl;
+    cin >> var1 >> var2 >> var3 >> var4 >> var5;
+
+    
+    cout << fixed << setprecision(1) << var1 << endl; // 2.3
+    cout << fixed << setprecision(2) << var2 << endl; // 2.30
+    cout << fixed << setprecision(6) << var3 << endl; // 2.123456
+    cout << fixed << setprecision(2) << var4 << endl; // 2.12
+    cout << static_cast<int>(var5) << endl;           // 2
+    
+    return 0;
+}
+// task 8
+#include <iostream>
+#include <cmath> 
+using namespace std;
+
+int main(void) {
+    
+    const float EPSILON = 0.000001;
+
+
+    int num1, num2;
+    cout << "Enter two integer numbers: ";
+    cin >> num1 >> num2;
+
+
+    float result1 = 1.0f / num1;
+    float result2 = 1.0f / num2;
+
+ 
+    if (abs(result1 - result2) < EPSILON) {
+        cout << "Results are equal (by 0.000001 epsilon)" << endl;
+    } else {
+        cout << "Results are not equal (by 0.000001 epsilon)" << endl;
+    }
+
+    return 0;
+}
+//task 9
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1, num2, num3, num4;
+
+    cout << "Enter four numbers for IP address (each between 1 and 255):" << endl;
+    cin >> num1 >> num2 >> num3 >> num4;
+
+    if ((num1 >= 1 && num1 <= 255) &&
+        (num2 >= 1 && num2 <= 255) &&
+        (num3 >= 1 && num3 <= 255) &&
+        (num4 >= 1 && num4 <= 255)) {
+         
+        cout << num1 << "." << num2 << "." << num3 << "." << num4 << endl;
+    } else {
+        cout << "One or more numbers are out of the range 1-255." << endl;
+    }
+
+    return 0;
+}
